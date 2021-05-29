@@ -104,4 +104,4 @@ dist
 .tern-port
 
 # Generate webpack
-content/main.js
+content/dist/bundle.js

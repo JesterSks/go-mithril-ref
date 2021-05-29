@@ -14,6 +14,7 @@
    limitations under the License.
 */
 const m = require("mithril")
+require("spectre.css/dist/spectre.css")
 
 m.route(document.body, "/", {
     "/": require("./views/ItemList")

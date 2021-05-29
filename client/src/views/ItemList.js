@@ -20,6 +20,20 @@ module.exports = {
     oninit: Thing.loadThing,
     view: function() {
         let t = Thing.data
-        return m("p", t["test"])
+        return m("div", [
+            m("div.hero.hero-sm.bg-primary",
+                m("div.hero-body", [
+                    m("h1", "Hero Title"),
+                    m("p", "This is a hero example")
+                ])
+            ),
+            m("div.container",
+                m("div.columns.col-gapless",
+                    m("div.column.col-12",
+                        m("p", t["test"])
+                    )
+                )
+            )
+        ])
     }
 }
