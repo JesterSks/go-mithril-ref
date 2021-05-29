@@ -14,8 +14,23 @@
    limitations under the License.
 */
 const m = require("mithril")
+const i18n = require("i18next").default
 require("spectre.css/dist/spectre.css")
 
 m.route(document.body, "/", {
     "/": require("./views/ItemList")
+})
+
+i18n.init({
+    lng: 'en',
+    debug: true,
+    resources: {
+        en: {
+            translation: {
+                "key": "hello world"
+            }
+        }
+    }
+}).then(function(t) {
+    m.redraw()
 })

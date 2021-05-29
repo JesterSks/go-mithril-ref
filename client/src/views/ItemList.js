@@ -14,6 +14,7 @@
    limitations under the License.
 */
 const m = require("mithril")
+const i18n = require("i18next").default
 const Thing = require("../models/Thing")
 
 module.exports = {
@@ -29,9 +30,10 @@ module.exports = {
             ),
             m("div.container",
                 m("div.columns.col-gapless",
-                    m("div.column.col-12",
-                        m("p", t["test"])
-                    )
+                    m("div.column.col-12",[
+                        m("p", t["test"]),
+                        m("p", i18n.t("key")),
+                    ])
                 )
             )
         ])

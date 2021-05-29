@@ -17,6 +17,7 @@
     "webpack-cli": "^4.7.0"
   },
   "dependencies": {
+    "i18next": "^20.3.1",
     "mithril": "^2.0.4",
     "spectre.css": "^0.5.9"
   }
